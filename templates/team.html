@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+<div class="main" style="height:100vh; width:100vw;">
+    <div class="abs">
+        <h1>Our Developer's Team</h1>
+
+    </div>
+
+    
+    {% for i in data %}
+    <div class="profile-card">
+     <div class="img">
+        <img src="/media/{{i.image}}">
+        </div>
+        <div class="caption">
+            <h3>{{i.name}}</h3>
+            {% comment %} <h5>{{i.phone}}</h5> {% endcomment %}
+            {% comment %} <a href="mailto:">{{i.email}}</a> {% endcomment %}
+            <p>{{i.position}}</p>
+            {% comment %} <p>{{i.skills}}</p> {% endcomment %}
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook"></i> </a>
+              <a href="#"><i class="fab fa-instagram"></i> </a>
+              <a href="#"><i class="fab fa-whatsapp"></i> </a>
+            </div>
+        </div>
+     </div>
+{% endfor %}
+
+</div>
+
+
+{% endblock %}

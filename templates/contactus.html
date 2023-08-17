@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact" id="contact">
+    <div id="email" class="con">
+        <div class="il">
+            <i class='bx bx-envelope'></i>
+        </div>
+        <div class="eid">
+           <h2> Our Email Id</h2>
+            <a href="mailto:mr.satishmunde@gmail.com">mr.satishmunde@gmail.com</a>
+        </div>
+    </div>
+    <div id="num" class="con">
+        <div class="il">
+            <i class='bx bx-phone' ></i>
+        </div>
+        <div class="eid">
+            <h2>My Number</h2>
+           <a href="callto:8459896076"> <h3>8459896076</h3></a>
+
+        </div>
+    </div>
+
+    <div class="sent">
+        <form method="POST" action="{% url 'saveform' %}">
+            {% csrf_token %}
+            
+            {% comment %} <label for="con_name" class="form-label">Enter Your Name</label> {% endcomment %}
+            <input type="text" class="form-control" name="Name" id="con_name" placeholder="Enter Your Name">
+            <input type="email" name="Email" class="form-control" id="Con_email" placeholder="Enter Your Emails">
+            <input type="number" name="number" id="con_num" class="form-control" placeholder="Enter Your Phone Number">
+            <textarea name="Message" id="con_add"  placeholder="Message" cols="60" rows="5"></textarea>
+            <input type="submit" class="btn btn-outline-success h-10 " name="Submit" id="Submit" value="Sent">
+        </form>
+    </div>
+
+    
+    
+</section>
+
+  
+{% endblock  %}

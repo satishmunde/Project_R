@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div class="container" style="display:flex; justify-content:center; align-items:center">
+
+		<div class="right" >
+			<h3>PAYMENT</h3>
+			<form action="/ordhist/" method="post">
+				{% csrf_token %}
+				Accepted Card <br>
+				<img src="/static/images/card1.png" width="100">
+				Credit card number
+				<input type="text" name="" class="form-control" placeholder="Enter card number">
+				
+				Exp month
+				<input type="text" class="form-control" name="" placeholder="Enter Month">
+				<div id="zip">
+					<label>
+						Exp year
+						<select>
+							<option>Choose Year..</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+						</select>
+					</label>
+				<br>
+						<label>
+						CVV
+						<input type="number" class="form-control" name="" placeholder="CVV">
+					</label>
+				</div>
+				<input type="submit" class="form-control" name="" value="Order ">
+			</form>
+			
+		</div>
+	</div>
+{% endblock %}

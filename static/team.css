@@ -1,0 +1,123 @@
+
+.main{
+    /* background-color: #a2c7a6; */
+    /* background-color:#e2acec; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+    /* height: 100vh; */
+    box-sizing: border-box;
+    /* background-color: red; */
+    /* padding: 0 50px; */
+}
+.profile-card{
+    position: relative;
+    width: 220px;
+    height: 220px;
+  
+    justify-content: space-around;
+    background: #fff;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+    /* margin: 120px 120px; */
+
+    margin: 10px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+
+.abs{
+    height: 100px;
+    width: 100vw;
+    position: relative;
+    margin-top:80px;
+    /* flex-shrink: 0; */
+    border-radius: 30px;
+    background-color: #00abf0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+img{
+    position: absolute;
+
+}
+.abs h1{
+    font-size: 40px;
+    color: #91f9e8;
+}
+.profile-card:hover{
+   border-radius: 10px; 
+   height: 260px;
+   transform: translateY(60px);
+   background-color: #91f9e8;
+}
+.profile-card .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 1;
+}
+.profile-card:hover .img{
+    transform: translateY(-100px);
+
+}
+.img img{
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+}
+.profile-card:hover img{
+    border-radius: 20px;
+    /* opacity: 0; */
+}
+.caption{
+    position: relative;
+    z-index: 2;
+    font-family: kala,;
+    text-align: center;
+    transform: translateY(0px);
+    opacity: 0;
+    transition: .6s;
+}
+.profile-card:hover .caption{
+    opacity: 1;
+}
+.caption h3{
+    font-size: 25px;
+    color: #00abf0;
+}
+.caption p{
+    font-size: 17px;
+    color: #0c52a1;
+    margin: 2px 0 6px 0;
+}
+.social-links{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+.caption .social-links a{
+    color: #333;
+    margin-right: 8px;
+    font-size: 18px;
+    transition: .6s;
+    /* background-color: red; */
+}
+.social-links a:hover{
+    color: #0c52a1;
+    transform: scale3d(1.3,1.3,1.3);
+}
+

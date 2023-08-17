@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+
+  {% if request.path == '/aboutus'%}
+   <link rel="stylesheet" href="/static/team.css">  {% endif %}
+  {% if request.path == '/ordhist'%}
+  <link rel="stylesheet" href="/static/ordhist.css">  {% endif %}
+  
+  <link rel="stylesheet" href="/static/header.css"> 
+  {% if request.path == '/checkout'%}
+  <link rel="stylesheet" href="/static/checkout.css"> {% endif %}
+  {% if request.path == '/payment'%}
+  <link rel="stylesheet" href="/static/payment.css"> {% endif %}
+
+  
+  
+
+
+</head>
+<body>
+<section id="header" >
+  <div class="name">
+    Meri_Rakhi.Com
+  </div>
+  <div>
+      <ul id="navbar">
+          <li><a class="{% if request.path == '/'%} active {% endif %}" href="/">Home</a></li>
+          <li><a href="/new_arrivals" class="{% if request.path == '/new_arrivals'%} active {% endif %}">Shop</a></li>
+  
+          <li><a href="/aboutus" class="{% if request.path == '/aboutus'%} active {% endif %}">about</a></li>
+          <li><a href="/saveform" class="{% if request.path == '/saveform'%} active {% endif %}">contact</a></li>
+          <li><a href="/cart"> Cart</a>
+          </li>
+  
+      </ul>
+  
+  
+</section>
